@@ -2,7 +2,7 @@ import streamlit as st #importar la libreria
 from groq import Groq #? NUEVA IMPORTACIÓN
 
 #configuración de la ventana de la web
-st.set_page_config(page_title = "Mi chat de IA", page_icon= "🎁")
+st.set_page_config(page_title = "Mi chat de IA", page_icon= "img/chat.jfif")
 #Titulo de la pagina
 st.title("Mi primera aplicación con Streamlit")
 #Ingreso de dato del usuario
@@ -79,7 +79,7 @@ def main():
 
     #! NUEVA ESTRUCTURA DE CÓDIGO
     if mensaje:
-        actualizar_historial("user", mensaje, "🧚‍♀️") #Mostramos el mensaje del usuario
+        actualizar_historial("user", mensaje, "👨") #Mostramos el mensaje del usuario
         chat_completo = configurar_modelo(clienteUsuario, modelo, mensaje) #obteniendo la respuesta
         if chat_completo: #verificamos que tenga contenido
             with st.chat_message("assistant") :
